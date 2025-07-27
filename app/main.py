@@ -25,6 +25,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.get("/")
+def root():
+    return {"message": "✅ Vehicle Telemetry API is live!"}
 def read_root():
     return {"message": "Vehicle Telemetry API is running 🚗"}
 
