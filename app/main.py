@@ -25,6 +25,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+def read_root():
+    return {"message": "Vehicle Telemetry API is running 🚗"}
 
 def get_db(): ## a new database session to each request, and ensures it's closed afterward.
     db=SessionLocal()
